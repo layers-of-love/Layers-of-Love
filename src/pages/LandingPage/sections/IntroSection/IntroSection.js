@@ -10,8 +10,12 @@ export default function IntroSection() {
       <div className={styles.introText}>
         <h1 className={styles.title}>Create new Masterpieces</h1>
         <p className={styles.subtitle}>Choose art pieces from Toronto's top 10 artists to combine and create an original artpiece. Upload your masterpiece to the gallery. See what others have created.</p>
+        <button className={`${styles.introBtn} ${styles.createBtn}`}>Create</button>
+        <button className={`${styles.introBtn} ${styles.exploreBtn}`}>Explore</button>
       </div>
-      <img src={logo} className={styles.logoImg}/>
+      <div className={styles.imgContainer}>
+        <img src={logo} className={styles.logoImg}/>
+      </div>
     </div>
   )
 }

@@ -1,10 +1,14 @@
-.container {
-  /* background-color: rgba(250, 208, 13, 0.6); */
-  background-color: #080708;
-  color: #fff;
-  position: fixed;
+.wrapper {
+  position: relative;
   bottom: 0;
   width: 100%;
+}
+
+.container {
+  /* background-color: rgba(250, 208, 13, 0.6); */
+  /* background-color: #080708; */
+  color: #fff;
+  background-color: #d9298a;
   padding: 20px 50px;
 }
 
