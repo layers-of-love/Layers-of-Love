@@ -1,0 +1,29 @@
+.container {
+  /* background-color: rgba(250, 208, 13, 0.6); */
+  background-color: #080708;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 50px;
+}
+
+.container p {
+  margin: 5px 0;
+  padding: 0;
+  letter-spacing: 1px;
+}
+
+.link {
+  text-decoration: none;
+  color: #fad00d;
+  font-weight: 600;
+  border-bottom: 1px solid #fad00d;
+  display: inline-block;
+}
+
+.link:hover {
+  transform: translateY(-2px);
+  cursor: pointer;
+  transition: 0.4s;
+}
