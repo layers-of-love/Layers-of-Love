@@ -64,3 +64,23 @@
   object-fit: scale-down;
   margin: auto;
 }
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .imgContainer {
+    display: none;
+  }
+
+  .btns {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .exploreBtn {
+    margin: 0;
+    margin-top: 20px;
+  }
+}

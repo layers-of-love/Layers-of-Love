@@ -52,4 +52,16 @@
   width: 100%;
   /* border: 1px solid black; */
   box-shadow: 0px 10px 18px 0 rgba(0,0,0,0.16);
+  background-color: #fff;
+}
+
+@media (max-width: 800px) {
+  .createContainer {
+    display: block;
+  }
+
+  .instructions {
+    border: 2px solid #080708;
+    margin-bottom: 20px;
+  }
 }
