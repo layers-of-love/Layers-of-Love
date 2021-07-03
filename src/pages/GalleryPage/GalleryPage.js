@@ -4,16 +4,16 @@ import Navbar from '../../components/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 // sections
 import IntroSection from './sections/IntroSection/IntroSection';
-import CreateSection from './sections/CreateSection/CreateSection';
+import CardsSection from './sections/CardsSection/CardsSection';
 // styles
-import styles from './LandingPage.module.css';
+import styles from './GalleryPage.module.css';
 
 export default function LandingPage() {
   return (
     <div className={styles.container}>
-      <Navbar currentPage='home'/>
+      <Navbar currentPage='gallery'/>
       <IntroSection/>
-      <CreateSection/>
+      <CardsSection/>
       <Footer/>
     </div>
   )

@@ -1,0 +1,10 @@
+.container {
+  min-height: 50vh;
+  padding: 10px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fill, 320px); */
+  justify-content: space-around;
+  grid-gap: 20px;
+}
