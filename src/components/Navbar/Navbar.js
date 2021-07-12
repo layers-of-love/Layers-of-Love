@@ -32,7 +32,7 @@ export default function Navbar({ currentPage }) {
           <Link to='/about' className={aboutStyle}>About</Link>
         </div>
       </div>
-    )
+    );
 
     let mobileNav = (
       <div className={styles.mobileNavCloseContainer}>
@@ -43,7 +43,7 @@ export default function Navbar({ currentPage }) {
           <i class="fas fa-bars"></i>
         </div>
       </div>
-    )
+    );
 
     let showMobileNav = (
       <div className={styles.mobileNavContainer}>
@@ -58,7 +58,7 @@ export default function Navbar({ currentPage }) {
           </div>
         </div>
       </div>
-    )
+    );
 
   return (
     <div>
