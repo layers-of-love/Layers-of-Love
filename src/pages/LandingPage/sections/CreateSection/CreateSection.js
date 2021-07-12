@@ -37,7 +37,7 @@ export default function CreateSection() {
         <InstructionsModal setOpenInstructionsModal={setOpenInstructionsModal}/>
       )}
       {openSubmitModal && (
-        <SubmitModal setOpenSubmitModal={setOpenSubmitModal}/>
+        <SubmitModal setOpenSubmitModal={setOpenSubmitModal} imgSrcs={imgsClicked}/>
       )}
       <div className={styles.container}>
         <h2 className={styles.instructionsTitle} onClick={() => setOpenInstructionsModal(true)}><i class="fas fa-plus-circle"/>Instructions</h2>

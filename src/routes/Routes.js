@@ -10,10 +10,10 @@ import AboutPage from '../pages/AboutPage/AboutPage';
 export default function Routes() {
   return(
     <Router>
+      <GalleryArtworkProvider>
         <Switch>
           <Route exact path='/' component={LandingPage}/>
         </Switch>
-      <GalleryArtworkProvider>
         <Switch>
           <Route exact path='/gallery' component={GalleryPage}/>
         </Switch>

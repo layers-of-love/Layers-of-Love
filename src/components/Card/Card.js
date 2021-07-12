@@ -4,18 +4,20 @@ import logo from '../../assets/imgs/logo.png';
 // styles
 import styles from './Card.module.css';
 
-export default function Card() {
+export default function Card({ title, artist, location, date, imgSrcs }) {
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
-        <img src={logo}/>
+        {imgSrcs.map((src, zIndex) => (
+            <img key={zIndex} src={src} style={{zIndex: zIndex}}/>
+        ))}
       </div>
       <div className={styles.cardInfo}>
-        <h2 className={styles.title}>Untitled</h2>
-        <p className={styles.artist}>By Anonymous</p>
+        <h2 className={styles.title}>{title ? title : 'Untitled'}</h2>
+        <p className={styles.artist}>By {artist ? artist : 'Anonymous'}</p>
         <div className={styles.postingInfo}>
-          <p className={styles.location}>City, Country</p>
-          <p className={styles.date}>Datee</p>
+          <p className={styles.location}>{location ? location : 'Somewhere, Earth'}</p>
+          <p className={styles.date}>{date ? date : 'Sometime'}</p>
         </div>
       </div>
     </div>

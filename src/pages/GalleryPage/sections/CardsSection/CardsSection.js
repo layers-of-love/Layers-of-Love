@@ -9,10 +9,18 @@ import styles from './CardsSection.module.css';
 export default function CardsSection() {
   // contexts
   const { galleryPieces } = useGalleryArtwork();
-  
+
   return (
     <div className={styles.container}>
-      <Card/><Card/><Card/><Card/><Card/><Card/>
+      {galleryPieces.map((piece) => (
+        <Card
+          title={piece.title}
+          artist={piece.artist}
+          location={piece.location}
+          date={piece.date}
+          imgSrcs={piece.imgSrcs}
+        />
+      ))}
     </div>
   )
 }

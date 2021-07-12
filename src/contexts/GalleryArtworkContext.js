@@ -1,5 +1,5 @@
 import React, { useContext, createContext, useState, useEffect } from 'react';
-import { db } from '../firebase/index';
+import { firebase, db } from '../firebase/index';
 
 const GalleryArtworkContext = createContext();
 
@@ -13,6 +13,7 @@ export function GalleryArtworkProvider({ children }) {
   const [location, setLocation] = useState('');
   const [imgsPath, setImgsPath] = useState([]);
   const [galleryPieces, setGalleryPieces] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const getGalleryPieces = () => {
     db.collection('artwork').onSnapshot((snapshot) => {
@@ -31,17 +32,33 @@ export function GalleryArtworkProvider({ children }) {
     })
   }
 
+  const handleSubmitPiece = (evt) => {
+    evt.preventDefault();
+    db.collection('artwork').add({
+      artist: artist,
+      title: title,
+      location: location,
+      imgSrcs: imgsPath,
+    });
+  }
+
   useEffect(() => {
     getGalleryPieces();
+    setLoading(false);
   }, []);
 
   const value = {
     galleryPieces,
+    setTitle,
+    setArtist,
+    setLocation,
+    setImgsPath,
+    handleSubmitPiece,
   }
 
   return (
     <GalleryArtworkContext.Provider value={value}>
-      {children}
+      {!loading && children}
     </GalleryArtworkContext.Provider>
   )
 }
