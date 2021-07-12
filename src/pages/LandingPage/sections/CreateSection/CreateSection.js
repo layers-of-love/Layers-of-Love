@@ -62,7 +62,7 @@ export default function CreateSection() {
             {
               Object.entries(imgsOrder).map(([key, val]) => (
                 val != -1
-                ? (<img key={key} src={key} className={`zI_${val}`}/>)
+                ? (<img key={key} src={key} style={{zIndex: `${val}`}}/>)
                 : (null)
               ))
             }

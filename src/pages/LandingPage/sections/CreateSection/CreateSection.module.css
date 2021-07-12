@@ -66,20 +66,6 @@
   object-fit: scale-down;
 }
 
-.zI_1 {
-  z-index: 1;
-}
-
-.zI_2 {
-  z-index: 2;
-}
-
-.zI_-1 {
-  display: none;
-  z-index: -1;
-}
-
-
 @media (max-width: 800px) {
   .createContainer {
     display: block;
