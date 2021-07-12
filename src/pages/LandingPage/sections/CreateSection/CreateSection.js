@@ -6,10 +6,12 @@ import SubmitModal from '../../../../components/Modal/SubmitModal';
 import styles from './CreateSection.module.css';
 
 export default function CreateSection() {
+  // states
   const [openInstructionsModal, setOpenInstructionsModal] = useState(false);
   const [openSubmitModal, setOpenSubmitModal] = useState(false);
   const [imgzI, setImgzI] = useState(0);
   const [imgsClicked, setImgsClicked] = useState([]);
+  // consts
   const NUMBER_OF_LAYERS = 23;
 
   let imgSrcs = [];
