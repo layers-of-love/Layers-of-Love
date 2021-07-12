@@ -3,13 +3,33 @@ import React, { useState } from 'react';
 import InstructionsModal from '../../../../components/Modal/InstructionsModal';
 // styles
 import styles from './CreateSection.module.css';
-// assets
-import shape1 from '../../../../assets/imgs/logo.png';
-import shape2 from '../../../../assets/imgs/Combined-Shape.png';
+// assets (layers)
+import l1 from '../../../../assets/imgs/layers/l1.png';
+import l2 from '../../../../assets/imgs/layers/l2.png';
+import l3 from '../../../../assets/imgs/layers/l3.png';
+import l4 from '../../../../assets/imgs/layers/l4.png';
+import l5 from '../../../../assets/imgs/layers/l5.png';
+import l6 from '../../../../assets/imgs/layers/l6.png';
+import l7 from '../../../../assets/imgs/layers/l7.png';
+import l8 from '../../../../assets/imgs/layers/l8.png';
+import l9 from '../../../../assets/imgs/layers/l9.png';
+import l10 from '../../../../assets/imgs/layers/l10.png';
+import l11 from '../../../../assets/imgs/layers/l11.png';
+import l12 from '../../../../assets/imgs/layers/l12.png';
+import l13 from '../../../../assets/imgs/layers/l13.png';
+import l14 from '../../../../assets/imgs/layers/l14.png';
+import l15 from '../../../../assets/imgs/layers/l15.png';
+import l16 from '../../../../assets/imgs/layers/l16.png';
+import l17 from '../../../../assets/imgs/layers/l17.png';
+import l18 from '../../../../assets/imgs/layers/l18.png';
+import l19 from '../../../../assets/imgs/layers/l19.png';
+import l20 from '../../../../assets/imgs/layers/l20.png';
+import l21 from '../../../../assets/imgs/layers/l21.png';
+import l22 from '../../../../assets/imgs/layers/l22.png';
+import l23 from '../../../../assets/imgs/layers/l23.png';
 
 export default function CreateSection() {
   const [openInstructionsModal, setOpenInstructionsModal] = useState(false);
-  const [imgsOrder, setImgsOrder] = useState({});
   const [imgzI, setImgzI] = useState(0);
   const [imgsClicked, setImgsClicked] = useState([]);
 
@@ -17,7 +37,6 @@ export default function CreateSection() {
     imgsClicked.includes(src)
     ? setImgsClicked(imgsClicked.filter(el => el !== src))
     : setImgsClicked([...imgsClicked, src])
-    setImgsOrder({...imgsOrder, [src]: zI});
   }
 
   const addzI = (src) => {
@@ -25,6 +44,9 @@ export default function CreateSection() {
     setImgzI(imgzI + 1);
     return imgzI + 1;
   }
+
+  // we have to do things this ugly way bc `l${i}` just converts this into a str when we want an obj :(
+  let imgSrcs = [l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12, l13, l14, l15, l16, l17, l18, l19, l20, l21, l22, l23];
 
   return (
     <div className={styles.wrapper}>
@@ -36,34 +58,32 @@ export default function CreateSection() {
         <div className={styles.createContainer}>
           <div className={styles.instructions}>
             <div className={styles.imgs}>
-              <img src={shape1} className={styles.imgBox} onClick={() => addImg(shape1, addzI(shape1))}/>
-              <img src={shape2} className={styles.imgBox} onClick={() => addImg(shape2, addzI(shape2))}/>
-              <img src={shape1} className={styles.imgBox}/>
-              <img src={shape1} className={styles.imgBox}/>
-              <img src={shape1} className={styles.imgBox}/>
-              <img src={shape1} className={styles.imgBox}/>
-              <img src={shape1} className={styles.imgBox}/>
-              <img src={shape1} className={styles.imgBox}/>
-              <img src={shape1} className={styles.imgBox}/>
-              <img src={shape1} className={styles.imgBox}/>
-              <img src={shape1} className={styles.imgBox}/>
-              <img src={shape1} className={styles.imgBox}/>
-              <img src={shape1} className={styles.imgBox}/>
-              <img src={shape1} className={styles.imgBox}/>
-              <img src={shape1} className={styles.imgBox}/>
-              <img src={shape1} className={styles.imgBox}/>
-              <img src={shape1} className={styles.imgBox}/>
-              <img src={shape1} className={styles.imgBox}/>
-              <img src={shape1} className={styles.imgBox}/>
-              <img src={shape1} className={styles.imgBox}/>
+              {
+                imgSrcs.map((imgSrc) => (
+                  imgsClicked.includes(imgSrc)
+                  ?
+                    <div className={styles.imgBoxContainer}>
+                      <h1 className={styles.clickedImgBoxText}>{imgsClicked.indexOf(imgSrc) + 1}</h1>
+                      <img
+                        className={`${styles.imgBox} ${styles.clickedImgBox}`}
+                        src={imgSrc}
+                        onClick={() => addImg(imgSrc, addzI(imgSrc))}
+                      />
+                    </div>
+                  :
+                    <img
+                      className={styles.imgBox}
+                      src={imgSrc}
+                      onClick={() => addImg(imgSrc, addzI(imgSrc))}
+                    />
+                ))
+              }
             </div>
           </div>
           <div className={styles.canvas}>
             {
-              Object.entries(imgsOrder).map(([key, val]) => (
-                val != -1
-                ? (<img key={key} src={key} style={{zIndex: `${val}`}}/>)
-                : (null)
+              imgsClicked.map((src, zIndex) => (
+                <img key={zIndex} src={src} style={{zIndex: zIndex}}/>
               ))
             }
           </div>
