@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // components
 import InstructionsModal from '../../../../components/Modal/InstructionsModal';
+import SubmitModal from '../../../../components/Modal/SubmitModal';
 // styles
 import styles from './CreateSection.module.css';
 // assets (layers)
@@ -30,6 +31,7 @@ import l23 from '../../../../assets/imgs/layers/l23.png';
 
 export default function CreateSection() {
   const [openInstructionsModal, setOpenInstructionsModal] = useState(false);
+  const [openSubmitModal, setOpenSubmitModal] = useState(false);
   const [imgzI, setImgzI] = useState(0);
   const [imgsClicked, setImgsClicked] = useState([]);
 
@@ -52,6 +54,9 @@ export default function CreateSection() {
     <div className={styles.wrapper}>
       {openInstructionsModal && (
         <InstructionsModal setOpenInstructionsModal={setOpenInstructionsModal}/>
+      )}
+      {openSubmitModal && (
+        <SubmitModal setOpenSubmitModal={setOpenSubmitModal}/>
       )}
       <div className={styles.container}>
         <h2 className={styles.instructionsTitle} onClick={() => setOpenInstructionsModal(true)}><i class="fas fa-plus-circle"/>Instructions</h2>
@@ -80,12 +85,15 @@ export default function CreateSection() {
               }
             </div>
           </div>
-          <div className={styles.canvas}>
-            {
-              imgsClicked.map((src, zIndex) => (
-                <img key={zIndex} src={src} style={{zIndex: zIndex}}/>
-              ))
-            }
+          <div className={styles.createdContainer}>
+            <div className={styles.canvas}>
+              {
+                imgsClicked.map((src, zIndex) => (
+                  <img key={zIndex} src={src} style={{zIndex: zIndex}}/>
+                ))
+              }
+            </div>
+            <button className={styles.submitBtn} onClick={() => setOpenSubmitModal(true)}>Submit to Gallery</button>
           </div>
         </div>
       </div>
