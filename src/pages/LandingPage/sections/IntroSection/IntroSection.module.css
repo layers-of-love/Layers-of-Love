@@ -24,7 +24,7 @@
 .subtitle {
   font-size: 24px;
   font-weight: 300;
-  /* width: 70%; */
+  width: 120%;
   /* line-height: 35px; */
   letter-spacing: 1px;
   margin: 5px 0 20px 0;
@@ -55,6 +55,7 @@
   /* width: 50%; */
   display: flex;
   justify-content: center;
+  margin-left: 80px;
 }
 
 .logoImg {

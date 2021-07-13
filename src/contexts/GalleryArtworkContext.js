@@ -24,6 +24,7 @@ export function GalleryArtworkProvider({ children }) {
           artist: doc.data().artist,
           title: doc.data().title,
           location: doc.data().location,
+          date: doc.data().date,
           imgSrcs: doc.data().imgSrcs,
         };
         artworks.push(artwork);
@@ -34,10 +35,12 @@ export function GalleryArtworkProvider({ children }) {
 
   const handleSubmitPiece = (evt) => {
     evt.preventDefault();
+    let currentDate = (new Date()).toString().split(' ').splice(1,3).join(' ');
     db.collection('artwork').add({
       artist: artist,
       title: title,
       location: location,
+      date: currentDate,
       imgSrcs: imgsPath,
     });
   }

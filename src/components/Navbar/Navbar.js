@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 // assets
-import logo from '../../assets/imgs/logo.png';
+// import logo from '../../assets/imgs/logo.png';
+import logo from '../../assets/imgs/Jun 2021 Layers of Love LOGO _ Khadija Aziz and Laura Kay Keeling.png';
 // styles
 import styles from './Navbar.module.css';
 
