@@ -17,7 +17,8 @@ export default function CardsSection() {
           title={piece.title}
           artist={piece.artist}
           location={piece.location}
-          date={piece.date}
+          pieceNumber={piece.pieceNumber}
+          date={(new Date(piece.date)).toString().split(' ').splice(1,3).join(' ')}
           imgSrcs={piece.imgSrcs}
         />
       ))}

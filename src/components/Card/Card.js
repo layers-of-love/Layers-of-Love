@@ -4,7 +4,7 @@ import logo from '../../assets/imgs/logo.png';
 // styles
 import styles from './Card.module.css';
 
-export default function Card({ title, artist, location, date, imgSrcs }) {
+export default function Card({ title, artist, location, date, pieceNumber, imgSrcs }) {
   return (
     <div className={styles.container}>
       <div className={styles.imgContainer}>
@@ -17,7 +17,7 @@ export default function Card({ title, artist, location, date, imgSrcs }) {
         <p className={styles.artist}>By {artist ? artist : 'Anonymous'}</p>
         <div className={styles.postingInfo}>
           <p className={styles.location}>{location ? location : 'Somewhere, Earth'}</p>
-          <p className={styles.date}>{date ? date : 'Sometime'}</p>
+          <p className={styles.date}>{date ? `${date} - ${pieceNumber}`  : 'Sometime'}</p>
         </div>
       </div>
     </div>
