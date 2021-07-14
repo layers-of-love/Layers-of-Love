@@ -5,6 +5,9 @@
   color: #080708;
   margin-top: 30px;
   padding: 0px 50px;
+
+  width: 100vw;
+  /* margin-left: calc(-50vw + 50%); */
 }
 
 .introText {

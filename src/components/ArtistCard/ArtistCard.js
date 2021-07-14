@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactReadMoreReadLess from 'react-read-more-read-less';
 // assets
 import logo from '../../assets/imgs/logo.png';
 // styles
@@ -23,8 +24,18 @@ export default function ArtistCard({ imgSrc, artist, bio, siteLink, igLink, emai
             <i class="far fa-envelope"></i>
           </a>
         </div>
-        <p className={styles.bio}>{bio}</p>
+        <p className={styles.bio}>
+        </p>
+        <ReactReadMoreReadLess
+              charLimit={350}
+              readMoreText={"Read more"}
+              readLessText={"Read less"}
+              readMoreClassName={styles.link}
+              readLessClassName={styles.link}
+          >
+              {bio}
+        </ReactReadMoreReadLess>
       </div>
     </div>
-  )
+  );
 }

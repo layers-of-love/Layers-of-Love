@@ -3,10 +3,13 @@
 }
 
 .extendedNav {
+  /* width: 100%; */
   display: flex;
   /* background-color: white; */
+  /* border: 1px solid blue; */
   justify-content: space-between;
   padding: 0px 50px;
+  /* padding: 0px 0px; */
   color: #080708;
 }
 
@@ -33,14 +36,26 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 450px;
+  /* width: 450px; */
 }
 
 .link {
+  margin: 0px 30px;
   letter-spacing: 1px;
   height: 25px;
   text-decoration: none;
   color: #080708;
+}
+
+.noLink {
+  color: #080708;
+  text-decoration: none;
+}
+
+.noLink:hover {
+  transform: translateY(-2px);
+  cursor: pointer;
+  transition: 0.4s;
 }
 
 .currentLink {

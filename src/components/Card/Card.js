@@ -17,7 +17,7 @@ export default function Card({ title, artist, location, date, pieceNumber, imgSr
         <p className={styles.artist}>By {artist ? artist : 'Anonymous'}</p>
         <div className={styles.postingInfo}>
           <p className={styles.location}>{location ? location : 'Somewhere, Earth'}</p>
-          <p className={styles.date}>{date ? `${date} - ${pieceNumber}`  : 'Sometime'}</p>
+          <p className={styles.date}>{date ? `${date} - No. ${pieceNumber}`  : 'Sometime'}</p>
         </div>
       </div>
     </div>

@@ -23,10 +23,12 @@ export default function Navbar({ currentPage }) {
 
     let extendedNav = (
       <div className={styles.extendedNav}>
-        <div className={styles.brand}>
-          <img src={logo} className={styles.logoImg}/>
-          <h2 className={styles.title}>Layers of Love</h2>
-        </div>
+        <Link to='/' className={styles.noLink}>
+          <div className={styles.brand}>
+            <img src={logo} className={styles.logoImg}/>
+            <h2 className={styles.title}>Layers of Love</h2>
+          </div>
+        </Link>
         <div className={styles.links}>
           <Link to='/' className={homeStyle}>Make Collage</Link>
           <Link to='/gallery' className={galleryStyle}>Gallery</Link>
@@ -37,9 +39,11 @@ export default function Navbar({ currentPage }) {
 
     let mobileNav = (
       <div className={styles.mobileNavCloseContainer}>
-        <div className={styles.brand}>
-          <img src={logo} className={styles.logoImg}/>
-        </div>
+        <Link to='/' className={styles.noLink}>
+          <div className={styles.brand}>
+            <img src={logo} className={styles.logoImg}/>
+          </div>
+        </Link>
         <div className={styles.mobileNav} onClick={() => setMobileNavOpen(true)}>
           <i class="fas fa-bars"></i>
         </div>

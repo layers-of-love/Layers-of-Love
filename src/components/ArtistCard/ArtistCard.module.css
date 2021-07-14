@@ -30,6 +30,11 @@
   /* text-justify: inter-word; */
 }
 
+.link {
+  color: #d9298a;
+  text-decoration: underline;
+}
+
 .socialIcon {
   background-color: #d9298a;
   color: #f0f1f4;
