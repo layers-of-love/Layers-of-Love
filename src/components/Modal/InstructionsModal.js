@@ -13,7 +13,6 @@ export default function InstructionsModal({ setOpenInstructionsModal }) {
             <i class="fas fa-times" onClick={() => setOpenInstructionsModal(false)}/>
           </div>
           <div className={styles.modalInfo}>
-            <p>Please note: if viewing on mobile the Canvas will not automatically rotate, please rotate your phone to view the Canvas in a horizontal orientation.</p>
             <ol>
               <li>Select an image by clicking one of the thumbnail icons from Layers. This will bring the image to your Canvas.</li>
               <li>Continue selecting the Layers in the order that you wish to see them, choosing as few or as many as you like.</li>

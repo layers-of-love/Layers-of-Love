@@ -1,27 +1,4 @@
-.wrapper {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin: auto;
-}
-
 .container {
-  /* width: 100%; */
-  /* min-height: 50vh; */
-  /* width: 100vw; */
-  /* margin: auto; */
-  /* padding: 10px 15px; */
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-  /* margin: auto; */
-  /* text-align: center; */
-
-
-  /* display: grid;
-  grid-template-columns: repeat(auto-fill, 400px);
-  justify-content: space-between;
-  grid-gap: 0px; */
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

@@ -30,3 +30,11 @@
   font-weight: 500;
   color: #d9298a;
 }
+
+@media (max-width: 800px) {
+  .container {
+    /* width: 90%; */
+    /* width: 100%; */
+    /* width: 400px; */
+  }
+}
