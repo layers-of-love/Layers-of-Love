@@ -90,3 +90,8 @@
   letter-spacing: 1px;
   margin-top: 10px;
 }
+
+.highlight {
+  font-weight: 700;
+  /* color: #d9298a; */
+}
