@@ -73,3 +73,19 @@
 .location, .date {
   color: #6c757d;
 }
+
+@media (max-width: 900px) {
+  .container {
+    width: 315px;
+  }
+
+  .imgContainer {
+    max-width: 315px;
+    height: 210px;
+  }
+
+  .imgContainer img {
+    max-width: 315px;
+    max-height: 210px;
+  }
+}

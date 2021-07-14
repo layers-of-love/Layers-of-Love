@@ -71,7 +71,7 @@
   margin: auto;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .container {
     /* display: none; */
   }
