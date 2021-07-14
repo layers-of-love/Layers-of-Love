@@ -53,9 +53,9 @@ export default function ArtistsSection() {
           emailAddress={'laurakay.keeling@gmail.com'}
         />
       </div>
-      <h1 className={styles.title}>Layers of Love x The Robert Mclaughlin Gallery</h1>
+      <h1 className={styles.title}>Layers of Love x The Robert McLaughlin Gallery</h1>
       <p className={styles.subtitle}>
-        For <strong>Layers of Love x RMG</strong>, three more artists were invited to join the project. In partnership with the RMG, layersoflove.ca is now home to a bank of images that were created by Khadija and Laura, as well as three new emerging artist contributors: <strong>kaya joan</strong>, <strong>Nicole Krstin</strong>, and <strong>Yahn Nemirovsky</strong>. The artists were asked to reflect and revisit previous pieces and to consider what it means to create layers from those artworks for the purpose of audiences utilizing them in their creation of digital collages alongside the other artists layers. You are invited to use the layers of love to explore the art of collage making. A gallery of community-made collages will grow in our <Link to='/gallery' className={styles.link}>Gallery</Link> and on the <a href='https://rmg.on.ca/layers-of-love-x-rmg/' className={styles.link}>RMG’s website</a>.
+        For <strong>Layers of Love x RMG</strong>, three more artists were invited to join the project. In partnership with the RMG, layersoflove.ca is now home to a bank of images that were created by Khadija and Laura, as well as three new artist contributors: <strong>kaya joan</strong>, <strong>Nicole Krstin</strong>, and <strong>Yahn Nemirovsky</strong>. The artists were asked to revisit existing artworks to create layers for this community-engaged project. In creating their layers, they reflected on what it means to share their work with other artists and collage-makers like you. You are invited to use the layers of love to explore the art of collage making. A gallery of community-made collages will grow in our <Link to='/gallery' className={styles.link}>Gallery</Link> and on the <a href='https://rmg.on.ca/layers-of-love-x-rmg/' className={styles.link}>RMG’s website</a>.
       </p>
       <h2 className={styles.title}>Featured Artists</h2>
       <div className={styles.featured}>
