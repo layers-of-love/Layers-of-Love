@@ -2,7 +2,8 @@
   color: #080708;
   margin-top: 30px;
   padding: 0px 50px;
-  width: 65%;
+  /* width: 65%; */
+  max-width: 880px;
 }
 
 .title {
@@ -19,4 +20,20 @@
   letter-spacing: 1px;
   margin: 5px 0 20px 0;
   padding: 0;
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 0 20px;
+    margin: auto;
+    margin: 20px 0;
+  }
+
+  .title {
+    font-size: 38px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
 }

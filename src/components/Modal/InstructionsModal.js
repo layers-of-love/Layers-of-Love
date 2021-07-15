@@ -14,7 +14,7 @@ export default function InstructionsModal({ setOpenInstructionsModal }) {
           </div>
           <div className={styles.modalInfo}>
             <ol>
-              <li>Select an image by clicking one of the thumbnail icons from Layers. This will bring the image to your Canvas.</li>
+              <li>Select an image by clicking one of the 23 thumbnail icons from Layers. This will bring the image to your Canvas.</li>
               <li>Continue selecting the Layers in the order that you wish to see them, choosing as few or as many as you like.</li>
               <li>To remove an image from your Canvas, unclick the Layer thumbnail.</li>
               <li>When you are happy with your digital collage, click “Submit” to add your layer to our <Link to='/gallery' className={styles.link}>Gallery</Link>!</li>

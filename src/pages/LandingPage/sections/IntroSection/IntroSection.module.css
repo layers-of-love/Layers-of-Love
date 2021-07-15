@@ -13,7 +13,8 @@
 }
 
 .introText {
-  flex: 1;
+  flex: 1.5;
+  /* width: 100%; */
   /* padding: 0 25px; */
   /* border: 1px solid black; */
 }
@@ -64,7 +65,6 @@
 }
 
 .logoImg {
-  /* border: 1px solid black; */
   width: 400px;
   height: 300px;
   object-fit: scale-down;
@@ -72,33 +72,21 @@
 }
 
 @media (max-width: 900px) {
-  .container {
-    /* display: none; */
-  }
-
   .imgContainer {
     display: none;
+  }
+
+  .container {
+    padding: 0 20px;
+    margin: auto;
+    margin: 20px 0;
+  }
+
+  .title {
+    font-size: 38px;
   }
 
   .subtitle {
-
+    font-size: 20px;
   }
-
-  /* .container {
-    flex-direction: column;
-  }
-
-  .imgContainer {
-    display: none;
-  }
-
-  .btns {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .exploreBtn {
-    margin: 0;
-    margin-top: 20px;
-  } */
 }

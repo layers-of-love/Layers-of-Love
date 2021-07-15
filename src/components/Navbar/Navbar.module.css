@@ -53,7 +53,8 @@
 }
 
 .noLink:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  color: #000;
   cursor: pointer;
   transition: 0.4s;
 }
@@ -76,7 +77,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
+    padding: 0 20px;
     font-size: 28px;
     margin-top: 10px;
   }

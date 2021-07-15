@@ -24,3 +24,9 @@
   cursor: pointer;
   transition: 0.4s;
 }
+
+@media (max-width: 900px) {
+  .container {
+    padding: 20px;
+  }
+}

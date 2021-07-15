@@ -1,7 +1,6 @@
 .container {
   color: #080708;
   margin-top: 30px;
-  padding: 0px 50px;
 }
 
 .title {
@@ -19,7 +18,7 @@
   font-weight: 300;
   letter-spacing: 1px;
   margin: 5px 0 20px 0;
-  padding: 10px 50px;
+  padding: 10px 80px;
 }
 
 .link {
@@ -27,6 +26,7 @@
 }
 
 .founders {
+  padding: 0px 50px;
   display: flex;
   justify-content: center;
 }
@@ -34,4 +34,25 @@
 .featured {
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .container {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .title {
+    font-size: 38px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    padding: 0 20px;
+  }
+
+  .founders, .featured {
+    flex-direction: column;
+  }
 }

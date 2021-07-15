@@ -14,13 +14,13 @@ export default function ArtistCard({ imgSrc, artist, bio, siteLink, igLink, emai
       <div className={styles.cardInfo}>
         <h2 className={styles.artist}>{artist}</h2>
         <div className={styles.socialIcons}>
-          <a href={siteLink} className={styles.socialIcon}>
+          <a href={siteLink} className={styles.socialIcon} target='_blank'>
             <i class="fas fa-link"></i>
           </a>
-          <a href={igLink} className={styles.socialIcon}>
+          <a href={igLink} className={styles.socialIcon} target='_blank'>
             <i class="fab fa-instagram"></i>
           </a>
-          <a href={`mailto:${emailAddress}`} className={styles.socialIcon}>
+          <a href={`mailto:${emailAddress}`} className={styles.socialIcon} target='_blank'>
             <i class="far fa-envelope"></i>
           </a>
         </div>
