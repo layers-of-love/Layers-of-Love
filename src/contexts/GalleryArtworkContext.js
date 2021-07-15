@@ -1,6 +1,6 @@
 import React, { useContext, createContext, useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import { firebase, db } from '../firebase/index';
+import { db } from '../firebase/index';
 
 const GalleryArtworkContext = createContext();
 

@@ -15,7 +15,7 @@ export default function IntroSection() {
         </p>
       </div>
       <div className={styles.imgContainer}>
-        <img src={logo} className={styles.logoImg}/>
+        <img src={logo} alt={'website logo'} className={styles.logoImg}/>
       </div>
     </div>
   )

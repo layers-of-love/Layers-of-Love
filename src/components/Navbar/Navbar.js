@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 // assets
-// import logo from '../../assets/imgs/logo.png';
 import logo from '../../assets/imgs/Jun 2021 Layers of Love LOGO _ Khadija Aziz and Laura Kay Keeling.png';
 // styles
 import styles from './Navbar.module.css';
@@ -11,13 +10,13 @@ export default function Navbar({ currentPage }) {
 
   let homeStyle, galleryStyle, aboutStyle;
 
-  currentPage == 'home'
+  currentPage === 'home'
     ? homeStyle = `${styles.link} ${styles.currentLink}`
     : homeStyle = `${styles.link}`;
-  currentPage == 'gallery'
+  currentPage === 'gallery'
     ? galleryStyle = `${styles.link} ${styles.currentLink}`
     : galleryStyle = `${styles.link}`;
-  currentPage == 'about'
+  currentPage === 'about'
     ? aboutStyle = `${styles.link} ${styles.currentLink}`
     : aboutStyle = `${styles.link}`;
 
@@ -25,7 +24,7 @@ export default function Navbar({ currentPage }) {
       <div className={styles.extendedNav}>
         <Link to='/' className={styles.noLink}>
           <div className={styles.brand}>
-            <img src={logo} className={styles.logoImg}/>
+            <img src={logo} className={styles.logoImg} alt={'website logo'}/>
             <h2 className={styles.title}>Layers of Love</h2>
           </div>
         </Link>
@@ -41,7 +40,7 @@ export default function Navbar({ currentPage }) {
       <div className={styles.mobileNavCloseContainer}>
         <Link to='/' className={styles.noLink}>
           <div className={styles.brand}>
-            <img src={logo} className={styles.logoImg}/>
+            <img src={logo} className={styles.logoImg} alt={'website logo'}/>
           </div>
         </Link>
         <div className={styles.mobileNav} onClick={() => setMobileNavOpen(true)}>

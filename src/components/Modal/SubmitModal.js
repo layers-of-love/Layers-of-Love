@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 // contexts
 import { useGalleryArtwork } from '../../contexts/GalleryArtworkContext';
 // styles

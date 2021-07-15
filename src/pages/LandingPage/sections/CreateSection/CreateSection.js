@@ -56,6 +56,7 @@ export default function CreateSection() {
                       <img
                         className={`${styles.imgBox} ${styles.clickedImgBox}`}
                         src={imgSrc}
+                        alt={'layer created by artist'}
                         onClick={() => addImg(imgSrc, addzI(imgSrc))}
                       />
                     </div>
@@ -63,6 +64,7 @@ export default function CreateSection() {
                     <img
                       className={styles.imgBox}
                       src={imgSrc}
+                      alt={'layer created by artist'}
                       onClick={() => addImg(imgSrc, addzI(imgSrc))}
                     />
                 ))
@@ -73,7 +75,7 @@ export default function CreateSection() {
             <div className={styles.canvas}>
               {
                 imgsClicked.map((src, zIndex) => (
-                  <img key={zIndex} src={src} style={{zIndex: zIndex}}/>
+                  <img key={zIndex} src={src} alt={'layer created by artist'} style={{zIndex: zIndex}}/>
                 ))
               }
             </div>

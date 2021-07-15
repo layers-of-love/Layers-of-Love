@@ -161,11 +161,6 @@
 
   .createdContainer {
     width: 100%;
-    /* border: 1px solid black; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
     text-align: center;
   }
 
@@ -181,7 +176,6 @@
   }
 
   .submitBtn {
-    /* margin: auto; */
     font-size: 24px;
     width: 300px;
     padding: 5px 30px;

@@ -1,6 +1,4 @@
 import React from 'react';
-// assets
-import logo from '../../assets/imgs/logo.png';
 // styles
 import styles from './Card.module.css';
 
@@ -9,7 +7,7 @@ export default function Card({ title, artist, location, date, pieceNumber, imgSr
     <div className={styles.container}>
       <div className={styles.imgContainer}>
         {imgSrcs.map((src, zIndex) => (
-            <img key={zIndex} src={src} style={{zIndex: zIndex}}/>
+            <img key={zIndex} src={src} style={{zIndex: zIndex}} alt={'layer created by artist'}/>
         ))}
       </div>
       <div className={styles.cardInfo}>
