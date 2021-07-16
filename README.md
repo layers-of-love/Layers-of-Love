@@ -1,4 +1,4 @@
-## Live Demo
+# Live Demo
 This website is now live at: https://layersoflove.ca/
 
 ## Running on Local Machine
@@ -48,12 +48,7 @@ This website is now live at: https://layersoflove.ca/
     ? Configure as a single-page app (rewrite all urls to /index.html)? Yes
     ? File public/index.html already exists. Overwrite? No
     ```
-    5. Install the Firebase package:
 
-
-    ```
-    npm install firebase
-    ```
 4. Set the API keys and backend configuration:
     1. Create a `.env` file in the current (root project) directory.
     2. In the online firebase console for this project, go to: `Project Settings --> Web Apps --> SDK setup and configuration (Config)`
