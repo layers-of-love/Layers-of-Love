@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+## Live Demo
+This website is now live at: https://layersoflove.ca/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Running on Local Machine
+1. Clone the repository:
 
-## Available Scripts
+    `git clone https://github.com/layers-of-love/layers-of-love-2021`
 
-In the project directory, you can run:
+2. `cd` into the `layers-of-love` folder and install the required dependencies:
 
-### `yarn start`
+    `npm install`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3. Initialize the Firebase Firestore backend:
+  1. Create a [Firebase account](https://firebase.google.com/).
+  2. Globally install the Firebase CLI & tools:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    `npm install -g firebase-tools`
+  3. Login to Firebase:
 
-### `yarn test`
+    `firebase login`
+  4. Setup Hosting (Firebase provides free hosting and domain name) and Firestore backend:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    `firebase init`
+    ```
+    ? Which Firebase CLI features do you want to setup for this folder?
+    Press Space to select features, then Enter to confirm your choices.
+    ◯ Database: Deploy Firebase Realtime Database Rules
+    ❯◯ Firestore: Deploy rules and create indexes for Firestore
+    ◯ Functions: Configure and deploy Cloud Functions
+    ❯◯ Hosting: Configure and deploy Firebase Hosting sites
+    ◯ Storage: Deploy Cloud Storage security rules
+   ```
 
-### `yarn build`
+     ```
+     ? What do you want to use as your public directory? build
+     ? Configure as a single-page app (rewrite all urls to /index.html)? Yes
+     ? File public/index.html already exists. Overwrite? No
+      ```
+  3. Install the Firebase package:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    `npm install firebase`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Set the API keys and backend configuration:
+    1. Create a `.env` file in the current (root project) directory.
+    2. In the online firebase console for this project, go to:
 
-### `yarn eject`
+    `Project Settings --> Web Apps --> SDK setup and configuration (Config)`
+    2. For each configuration key, copy its value and enter it in the `.env` file like so:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    `REACT_APP_<KEY>=<VALUE>`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+      **Note:** Must follow the same format that is already in the `src/firebase/index.js` file. For example, `index.js` has the format `process.env.REACT_APP_API_KEY`, and so, in the `.env` file, the format for the `apiKey` value must also be `REACT_APP_API_KEY=<VALUE>`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+      Do not include the angle brackets in `<KEY>`, or `<VALUE>`.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+5. Run on your local machine:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    `npm run start`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Deploying
+1. Build the project:
 
-### Code Splitting
+  `npm run build`
+2. Deploy to Firebase's default hosting and domain:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  `firebase deploy`
