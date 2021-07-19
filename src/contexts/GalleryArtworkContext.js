@@ -68,11 +68,12 @@ export function GalleryArtworkProvider({ children }) {
     setLocation,
     setImgsPath,
     handleSubmitPiece,
+    loading,
   }
 
   return (
     <GalleryArtworkContext.Provider value={value}>
-      {!loading && children}
+      {children}
     </GalleryArtworkContext.Provider>
   )
 }

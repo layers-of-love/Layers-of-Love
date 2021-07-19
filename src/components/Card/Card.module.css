@@ -10,10 +10,11 @@
 }
 
 .imgContainer {
-  max-width: 450px;
+  /* max-width: 450px; */
   height: 300px;
   margin: auto;
-  box-shadow: 0px 10px 18px 0 rgba(0,0,0,0.16);
+  /* box-shadow: 0px 10px 18px 0 rgba(0,0,0,0.16); */
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,6 +30,53 @@
 .cardInfo {
   text-align: left;
   background-color: #dee2e6;
+  /* padding: 0 3px; */
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.titleContainer  i {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #080708;
+  width: 30px;
+  border-radius: 20px;
+}
+
+.titleContainer  i:hover {
+  cursor: pointer;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #080708;
+  color: #dee2e6;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 99;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
 
 .postingInfo {
